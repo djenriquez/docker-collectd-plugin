@@ -103,6 +103,12 @@ packed into the `plugin_instance` dimension using the following syntax:
 ```
 plugin_instance:value[dim1=value1,dim2=value2,...]
 ```
+The dimensions can then be used as filters. Using the same examples as above, such filters would look like:
+```
+mesos_task_id:some_task_id
+image:some_image:some_tag
+foo:bar
+```
 
 Because CollectD limits the size of the reported fields to 64 total
 characters, trying to pack too many additional dimensions will result in
